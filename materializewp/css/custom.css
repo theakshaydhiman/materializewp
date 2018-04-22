@@ -1,0 +1,127 @@
+/*
+ * Globals
+ */
+
+p {
+  font-size: 18px;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: bold;
+  letter-spacing: -.5px;
+  line-height: 1.2em;
+  margin: 10px 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 2em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.2em;
+}
+h6 {
+  font-size: 1em;
+}
+
+/* Header */
+main {
+  padding-top: 20px;
+}
+
+.brand-logo {
+  font-weight: bold;
+}
+
+/*
+ * Blog name and description
+ */
+.blog-header {
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  border-bottom: .05rem solid #eee;
+}
+.blog-title {
+  margin-bottom: 0;
+}
+.blog-description {
+  color: #999;
+}
+
+.page-header {
+  margin-bottom: 80px;
+}
+
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: 1.25rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+}
+
+.post-thumb img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* COMMENTS */
+
+.comments {
+  margin-top: 30px;
+}
+
+.comments .comment-author img {
+  width: 120px;
+  border-radius: 100%;
+  float: left;
+  margin: 0 30px 30px 0;
+}
+
+.comment-author {
+  clear: both;
+}
+
+.comment-list>div {
+  margin: 50px 0;
+  overflow: auto;
+}
+
+.comment-content {
+  clear: both;
+}
+
+.comments .fn {
+  top: 10px;
+}
+
+/* SEARCHFORM */
+
+.input-field .prefix {
+  top: 10px;
+}
