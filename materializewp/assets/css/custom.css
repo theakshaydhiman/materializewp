@@ -71,15 +71,17 @@ main {
 }
 
 .page-header {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
-.blog-post {
+.blog-post, .blog-post-excerpt {
   margin-bottom: 4rem;
 }
+
 .blog-post-title {
   margin-bottom: 1.25rem;
 }
+
 .blog-post-meta {
   margin-bottom: 1.25rem;
 }
@@ -89,6 +91,9 @@ main {
   height: auto;
 }
 
+.blog-post-excerpt a {
+  color: rgba(0, 0, 0, 0.85);
+}
 
 /* COMMENTS */
 
