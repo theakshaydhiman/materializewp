@@ -4,7 +4,6 @@
  * 
  */
 
-
 // Enqueue Scripts and Stylesheets
 
 function materializewp_scripts() {

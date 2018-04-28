@@ -1,13 +1,12 @@
 <?php 
 
 /*
-  Template Name: Blank - No Container | Header, Footer
+  Template Name: Blank - No Container | No Header, Footer
 */
 
   ?>
 
 <?php get_header(); ?>
-<?php get_template_part('inc/partials/partials', 'navbar'); ?>
 
   <main role="main">
     <div class="row">

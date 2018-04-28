@@ -1,15 +1,14 @@
 <?php 
 
 /*
-  Template Name: Blank - No Container | Header, Footer
+  Template Name: Blank - Container | No Header, Footer
 */
 
   ?>
 
 <?php get_header(); ?>
-<?php get_template_part('inc/partials/partials', 'navbar'); ?>
 
-  <main role="main">
+  <main role="main" class="container">
     <div class="row">
       <div class="col s12 m12 l12 blog-main">
         <?php if(have_posts()) : ?>

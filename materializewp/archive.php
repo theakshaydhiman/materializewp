@@ -21,4 +21,5 @@
       </div>
     </main>
 
+<?php get_template_part('inc/partials/partials', 'footer'); ?>
 <?php get_footer(); ?>
