@@ -36,39 +36,22 @@ add_theme_support('html5',array('comment-list', 'comment-form', 'search-form'));
 // Let WordPress handle the <title> tag.
 add_theme_support( 'title-tag' );
 
-// Widget locations
-function adm_init_widgets($id){
-    register_sidebar(array(
-        'name'  =>  'Right Hand Sidebar',
-        'id'    =>  'sidebar',
-        'class' =>  'custom',
-        'before_widget' =>  '<aside id="%1$s" class="sidebar-module">',
-        'after_widget'  =>  '</aside>',
-        'before_title'  =>  '<h3>',
-        'after_title'   =>  '</h3>'
-    ));
-}
-
-add_action('widgets_init','adm_init_widgets');
-
 // Excerpt length control
 function set_excerpt_length(){
     return 45;
 }
-
 add_filter('excerpt_length', 'set_excerpt_length');
 
 // Head function, remove wp version
-function adm_remove_version() {
+function materializewp_remove_version() {
     return '';
 }
-add_filter('the_generator','adm_remove_version');
+add_filter('the_generator','materializewp_remove_version');
 
 // Includes
-
-require get_template_directory() . '/inc/function-admin.php';
-require get_template_directory() . '/inc/function-walker.php';
-
+require get_template_directory() . '/inc/functions/admin.php';
+require get_template_directory() . '/inc/functions/walker.php';
+require get_template_directory() . '/inc/functions/widgets.php';
 
 // Add class 'responsive-img' to all post images
 function add_image_class($class){

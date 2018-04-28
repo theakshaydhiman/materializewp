@@ -25,3 +25,6 @@
     )); ?>
 
 </header>
+
+<!-- Include header partial for header widgets. -->
+<?php get_template_part('inc/partials/partials', 'header'); ?>

@@ -1,5 +1,5 @@
 <div class="blog-post">
 
-  <?php get_template_part('content', get_post_format()); ?>
+  <?php get_template_part('post-templates/content', get_post_format()); ?>
 
 </div>

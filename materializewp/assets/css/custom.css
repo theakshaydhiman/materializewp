@@ -125,3 +125,20 @@ main {
 .input-field .prefix {
   top: 10px;
 }
+
+/* FOOTER */
+.footer-widget-1, 
+.footer-widget-2, 
+.footer-widget-3, 
+.footer-widget-4, 
+.header-widget-1, 
+.header-widget-2, 
+.header-widget-3, 
+.header-widget-4 {
+  margin: 0;
+  padding: 50px 0;
+  border-top: 1px solid rgba(0,0,0,0.25);
+}
+.page-footer {
+  padding-top: 0;
+}
