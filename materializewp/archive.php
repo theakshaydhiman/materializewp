@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<?php get_template_part('inc/partials/partials', 'navbar'); ?>
+
   <main role="main" class="container">
     <div class="row">
       <div class="col s12 m12 l8 blog-main">
@@ -9,13 +11,14 @@
             ?>
           </header>
           <?php while(have_posts()) : the_post(); ?>
-            <?php get_template_part('content', 'archive'); ?>
+            <?php get_template_part('post-templates/content', 'archive'); ?>
         <?php endwhile; ?> 
         <?php else : ?>
           <p><?php __('No Posts Found') ?></p>
         <?php endif; ?>
-        </div><!-- /.blog-main -->
+        </div>
         <?php get_sidebar(); ?>
-      </div><!-- /.row -->
-    </main><!-- /.container -->
+      </div>
+    </main>
+
 <?php get_footer(); ?>
