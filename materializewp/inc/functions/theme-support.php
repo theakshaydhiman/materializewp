@@ -8,13 +8,26 @@ function materializewp_setup(){
     register_nav_menu('secondary', "Footer Navigation");
     register_nav_menu('social', "Social Links");
 }
-
 add_action('init','materializewp_setup');
 
 add_theme_support('custom-background');
 add_theme_support('post-thumbnails');
-add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));
-add_theme_support('html5',array('comment-list', 'comment-form', 'search-form'));
+
+add_theme_support('post-formats', array(
+    'aside',
+    'gallery',
+    'link',
+    'image',
+    'quote',
+    'video',
+    'audio'
+));
+
+add_theme_support('html5', array(
+    'comment-list',
+    'comment-form',
+    'search-form'
+));
 
 // Let WordPress handle the <title> tag.
 add_theme_support( 'title-tag' );

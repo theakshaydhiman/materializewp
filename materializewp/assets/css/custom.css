@@ -147,3 +147,15 @@ main {
 .page-footer {
   padding-top: 0;
 }
+
+/* CONTENT TYPES */
+.card .card-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: -.5px;
+  line-height: 1.2em !important;
+  margin: 10px 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: rgba(0, 0, 0, 0.85);
+}
