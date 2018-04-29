@@ -8,6 +8,15 @@
     <div class="card-content">
       <h2 class="card-title activator grey-text text-darken-4"><?php the_title(); ?><i class="material-icons right">more_vert</i></h2>
       <p class="grey-text text-darken-1 activator"><?php the_author(); ?> on <?php echo get_the_date(); ?></p>
+      <?php
+        global $post;
+        if ( has_excerpt( $post->ID ) ) {
+          ?><br><?php
+            the_excerpt();
+        } else {
+            // This post has no excerpt
+        }
+      ?>
 		</div>
     <div class="card-reveal">
       <h2 class="card-title grey-text text-darken-4"><?php the_title(); ?><i class="material-icons right">close</i></h2>
