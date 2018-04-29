@@ -51,5 +51,4 @@ function add_image_class($class){
 }
 add_filter('get_image_tag_class','add_image_class');
 
-
 ?>
