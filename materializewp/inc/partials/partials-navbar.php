@@ -18,7 +18,7 @@
   </nav>
   <?php wp_nav_menu(array(
     'menu' => 'primary',
-//              'theme_location' => 'primary',
+    'theme_location' => 'primary', // sub level does not work
     'menu_class' => 'sidenav',
     'menu_id' => 'mobile-demo',
     'walker' => new Walker_Nav_Primary(),

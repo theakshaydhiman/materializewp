@@ -14,16 +14,7 @@
             <?php get_template_part('post-templates/content', get_post_format()); ?>
           <?php endwhile; ?>
 
-          <!-- Pagination -->
-          <ul class="pagination">
-            <li class="waves-effect"><a href="<?php echo get_previous_posts_page_link(); ?>"><i class="material-icons">chevron_left</i></a></li>
-<!--             <li class="active"><a href="#!">1</a></li>
-            <li class="waves-effect"><a href="#!">2</a></li>
-            <li class="waves-effect"><a href="#!">3</a></li>
-            <li class="waves-effect"><a href="#!">4</a></li>
-            <li class="waves-effect"><a href="#!">5</a></li> -->
-            <li class="waves-effect"><a href="<?php echo get_next_posts_page_link(); ?>"><i class="material-icons">chevron_right</i></a></li>
-          </ul>
+          <?php materializewp_pagination(); ?>
 
         <?php else : ?>
           <p><?php __('No Posts Found') ?></p>

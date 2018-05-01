@@ -20,3 +20,4 @@ require get_template_directory() . '/inc/functions/theme-support.php';
 require get_template_directory() . '/inc/functions/admin.php';
 require get_template_directory() . '/inc/functions/walker.php';
 require get_template_directory() . '/inc/functions/widgets.php';
+require get_template_directory() . '/inc/functions/pagination.php';

@@ -12,9 +12,10 @@
           </header>
           <?php while(have_posts()) : the_post();
             get_template_part('post-templates/content', 'archive');
-            endwhile;
-            else : ?>
-              <p><?php __('No Posts Found') ?></p>
+          endwhile;
+            materializewp_pagination();
+           else : ?>
+          <p><?php __('No Posts Found') ?></p>
         <?php endif; ?>
       </div>
       <?php get_sidebar(); ?>
