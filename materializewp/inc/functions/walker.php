@@ -4,7 +4,7 @@
 * Source: https://github.com/Kail0/wp-materialize-navwalker/issues/2
 */
 
-class Walker_Nav_Primary extends Walker {
+class MWP_Walker_Nav_Primary extends Walker {
   var $db_fields = array( 'parent' => 'menu_item_parent', 'id' => 'db_id' );
 
     function start_lvl( &$output, $depth = 0, $args = array() ) {

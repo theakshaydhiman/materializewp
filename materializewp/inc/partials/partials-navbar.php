@@ -9,7 +9,7 @@
           'menu' => 'primary',
           'theme_location' => 'primary',
           'menu_class' => 'hide-on-med-and-down',
-          'walker' => new Walker_Nav_Primary(),
+          'walker' => new MWP_Walker_Nav_Primary(),
           )); ?>
       </div>
 
@@ -21,7 +21,7 @@
     'theme_location' => 'primary', // sub level does not work
     'menu_class' => 'sidenav',
     'menu_id' => 'mobile-demo',
-    'walker' => new Walker_Nav_Primary(),
+    'walker' => new MWP_Walker_Nav_Primary(),
     )); ?>
 
 </header>
