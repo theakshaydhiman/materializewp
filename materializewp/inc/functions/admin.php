@@ -1,22 +1,18 @@
 <?php 
 
-// ADMIN PAGE
+// ADMIN MENU
 
-function adm_add_admin_page() {
+function mwp_admin_pages() {
 
-	add_menu_page('Material Theme Options', 'Material Theme', 'manage_options', 'material', 'material_theme_create_page', 'dashicons-admin-customizer', 3 );
+	// Admin Page.
+	add_menu_page('MaterializeWP Theme Options', 'MaterializeWP', 'manage_options', 'materializewp', 'mwp_general', 'dashicons-arrow-right-alt2', 3 );
 
-	add_submenu_page('material', 'Material Theme Options', 'General', 'manage_options',	'material', 'material_theme_create_page');
-	add_submenu_page('material', 'Material CSS', 'Custom CSS', 'manage_options', 'material-css', 'material_theme_css_page');
-
+	// Sub Pages.
+	add_submenu_page('materializewp', 'MaterializeWP Theme Options', 'General', 'manage_options',	'materializewp', 'mwp_general');
 
 }
-add_action('admin_menu', 'adm_add_admin_page');
+add_action('admin_menu', 'mwp_admin_pages');
 
-function material_theme_create_page() {
-	require_once( get_template_directory() . '/inc/templates/material-admin.php');
-}
-
-function material_theme_css_page() {
+function mwp_general() {
 	require_once( get_template_directory() . '/inc/templates/material-admin.php');
 }
