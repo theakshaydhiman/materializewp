@@ -5,6 +5,16 @@ main {
   padding-top: 20px;
 }
 
+nav .brand-logo {
+  font-size: 1.5em;
+}
+
+.custom-logo {
+  height: auto;
+  width: 200px;
+  margin-top: 5px;
+}
+
 /*
  * Blog name and description
  */
@@ -99,16 +109,9 @@ main {
 }
 
 /* CONTENT TYPES */
-.card .card-title {
+/* .card .card-title {
   font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: -.5px;
-  line-height: 1.2em !important;
-  margin: 10px 0;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: rgba(0, 0, 0, 0.85);
-}
+} */
 
 .gallery {
   display: none;
