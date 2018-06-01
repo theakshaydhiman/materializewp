@@ -49,7 +49,7 @@
         </div>
 
         <div class="card-content">
-          <h2 class="blog-post-title"><?php the_title(); ?></h2>
+          <h2 class="h4 blog-post-title"><?php the_title(); ?></h2>
           <p class="blog-post-meta grey-text text-darken-1">Written by <?php the_author(); ?> | <?php the_time('F j, Y'); ?> | <?php comments_number('No Comments', '1 Comment', '% Comments'); ?></p>
           <br>
           <?php the_excerpt(); ?>

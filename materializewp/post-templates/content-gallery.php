@@ -27,16 +27,23 @@
     ?>
 
   </div>
+
+  <!-- Display author section. -->
+  <?php 
+    if( is_single() ) {
+      get_template_part('inc/partials/partials', 'post-author');
+    }
+  ?>
   
-    <!-- Display comments -->
-    <?php if( is_single() ):
-      if( comments_open() ) { 
-        comments_template();
-      } else { 
-        echo '<p>Comments are closed for this post.</p>';
-        }
-      endif;
-    ?>
+  <!-- Display comments -->
+  <?php if( is_single() ):
+    if( comments_open() ) { 
+      comments_template();
+    } else { 
+      echo '<p>Comments are closed for this post.</p>';
+      }
+    endif;
+  ?>
 
 </div>
 
@@ -60,7 +67,7 @@
   
     <div class="card-content blog-post-excerpt">
       <a href="<?php the_permalink(); ?>">
-        <h2 class="blog-post-title"><?php the_title(); ?></h2>
+        <h2 class="h4 blog-post-title"><?php the_title(); ?></h2>
         <p class="blog-post-meta grey-text text-darken-1">Written by <?php the_author(); ?> | <?php the_time('F j, Y'); ?> | <?php comments_number('No Comments', '1 Comment', '% Comments'); ?></p>
         <br>
         <?php the_excerpt(); ?>

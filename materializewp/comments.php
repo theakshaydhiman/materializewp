@@ -1,8 +1,8 @@
 <div class="comments">
 
-  <?php if (have_comments()) : ?>
+  <?php if ( have_comments() ) : ?>
 
-    <h3>Comments</h3>
+  <h3 class="h4">Comments</h3>
 
   <?php endif; ?>
   <div class="comment-list">
@@ -21,9 +21,9 @@
       'avatar_size'       => 120,
       'reverse_top_level' => null,
       'reverse_children'  => '',
-      'format'            => 'html5', // or 'xhtml' if no 'HTML5' theme support
-      'short_ping'        => false,   // @since 3.6
-      'echo'              => true,     // boolean, default is true
+      'format'            => 'html5',
+      'short_ping'        => false,
+      'echo'              => true,
       );
 
     wp_list_comments($args, $comments);
@@ -33,7 +33,7 @@
   $commenter = wp_get_current_commenter();
   $req = get_option( 'require_name_email' );
   $aria_req = ( $req ? " aria-required='true'" : '' );
-  $fields =  array(
+  $fields = array(
 
     'author' =>
       '<p class="comment-form-author input-field"><label for="author">' . __( 'Name', 'domainreference' ) .
@@ -53,15 +53,14 @@
       '" size="30" /></p>',
   );
 
-
   $comments_args = array(
-          'label_submit'=>'Submit',
-          'class_submit'=>'btn',
-          'title_reply'=>'Leave a Comment',
-          'comment_notes_after' => '',
-          'comment_field' => '<p class="comment-form-comment input-field"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" aria-required="true" class="materialize-textarea"></textarea></p>',
-          'fields' => apply_filters( 'comment_form_default_fields', $fields ),
-          'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="%3$s btn waves-effect waves-light">%4$s</button>'
+    'label_submit'=>'Submit',
+    'class_submit'=>'btn',
+    'title_reply'=>'Leave a Comment',
+    'comment_notes_after' => '',
+    'comment_field' => '<p class="comment-form-comment input-field"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" aria-required="true" class="materialize-textarea"></textarea></p>',
+    'fields' => apply_filters( 'comment_form_default_fields', $fields ),
+    'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="%3$s btn waves-effect waves-light">%4$s</button>'
   );
 
   comment_form($comments_args);
