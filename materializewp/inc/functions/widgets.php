@@ -9,7 +9,7 @@ function materializewp_widgets($id){
     'id'            =>  'sidebar',
     'before_widget' =>  '<aside id="%1$s" class="sidebar-widget %2$s">',
     'after_widget'  =>  '</aside>',
-    'before_title'  =>  '<h3>',
+    'before_title'  =>  '<h3 class="h4">',
     'after_title'   =>  '</h3>'
   ));
 
@@ -19,7 +19,7 @@ function materializewp_widgets($id){
     'id'            =>  'header-one',
     'before_widget' =>  '<div id="%1$s" class="widget %2$s">',
     'after_widget'  =>  '</div>',
-    'before_title'  =>  '<h3>',
+    'before_title'  =>  '<h3 class="h4">',
     'after_title'   =>  '</h3>'
   ));
 
@@ -29,7 +29,7 @@ function materializewp_widgets($id){
     'id'            =>  'header-two',
     'before_widget' =>  '<div id="%1$s" class="widget %2$s">',
     'after_widget'  =>  '</div>',
-    'before_title'  =>  '<h3>',
+    'before_title'  =>  '<h3 class="h4">',
     'after_title'   =>  '</h3>'
   ));
 
@@ -39,7 +39,7 @@ function materializewp_widgets($id){
     'id'            =>  'header-three',
     'before_widget' =>  '<div id="%1$s" class="widget %2$s">',
     'after_widget'  =>  '</div>',
-    'before_title'  =>  '<h3>',
+    'before_title'  =>  '<h3 class="h4">',
     'after_title'   =>  '</h3>'
   ));
 
@@ -49,7 +49,7 @@ function materializewp_widgets($id){
     'id'            =>  'header-four',
     'before_widget' =>  '<div id="%1$s" class="widget %2$s">',
     'after_widget'  =>  '</div>',
-    'before_title'  =>  '<h3>',
+    'before_title'  =>  '<h3 class="h4">',
     'after_title'   =>  '</h3>'
   ));
 
@@ -59,7 +59,7 @@ function materializewp_widgets($id){
     'id'            =>  'footer-one',
     'before_widget' =>  '<div id="%1$s" class="widget %2$s">',
     'after_widget'  =>  '</div>',
-    'before_title'  =>  '<h3>',
+    'before_title'  =>  '<h3 class="h4">',
     'after_title'   =>  '</h3>'
   ));
 
@@ -69,7 +69,7 @@ function materializewp_widgets($id){
     'id'            =>  'footer-two',
     'before_widget' =>  '<div id="%1$s" class="widget %2$s">',
     'after_widget'  =>  '</div>',
-    'before_title'  =>  '<h3>',
+    'before_title'  =>  '<h3 class="h4">',
     'after_title'   =>  '</h3>'
   ));
 
@@ -79,7 +79,7 @@ function materializewp_widgets($id){
     'id'            =>  'footer-three',
     'before_widget' =>  '<div id="%1$s" class="widget %2$s">',
     'after_widget'  =>  '</div>',
-    'before_title'  =>  '<h3>',
+    'before_title'  =>  '<h3 class="h4">',
     'after_title'   =>  '</h3>'
   ));
 
@@ -89,7 +89,7 @@ function materializewp_widgets($id){
     'id'            =>  'footer-four',
     'before_widget' =>  '<div id="%1$s" class="widget %2$s">',
     'after_widget'  =>  '</div>',
-    'before_title'  =>  '<h3>',
+    'before_title'  =>  '<h3 class="h4">',
     'after_title'   =>  '</h3>'
   ));
 }
