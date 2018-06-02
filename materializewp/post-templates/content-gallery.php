@@ -7,8 +7,15 @@
 <?php if(is_single() || is_page()): ?>
 
 <div class="blog-post">
-  <div class="post-image card-panel">
+  <div class="post-image">
     <h1 class="blog-post-title"><?php the_title(); ?></h1>
+    <?php
+      if ( has_excerpt() ) {
+        ?><span class="h5"><?php the_excerpt(); ?></span><?php
+      } else {
+          // This post has no excerpt
+      }
+    ?>
     <p class="blog-post-meta grey-text text-darken-1">Written by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a> | <?php the_time('F j, Y'); ?> | <a href="<?php comments_link(); ?>"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a>
         </p>
     <?php if ( get_post_gallery() ) :
@@ -23,27 +30,23 @@
         <?php endforeach; ?>
       </div>
     <?php endif; 
+    
     the_content();
-    ?>
 
-  </div>
-
-  <!-- Display author section. -->
-  <?php 
+    /* Display author section. */
     if( is_single() ) {
-      get_template_part('inc/partials/partials', 'post-author');
+      get_template_part('inc/partials/partial', 'post-author');
     }
-  ?>
   
-  <!-- Display comments -->
-  <?php if( is_single() ):
-    if( comments_open() ) { 
-      comments_template();
-    } else { 
-      echo '<p>Comments are closed for this post.</p>';
-      }
+    /* Display comments */
+    if( is_single() ):
+      if( comments_open() ) { 
+        comments_template();
+      } else { 
+        echo '<p>Comments are closed for this post.</p>';
+        }
     endif;
-  ?>
+    ?>
 
 </div>
 

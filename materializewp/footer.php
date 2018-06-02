@@ -8,6 +8,7 @@
         indicators: true,
         noWrap: true
       });
+      M.Parallax.init(document.querySelectorAll('.parallax'));
     });
   </script>
 

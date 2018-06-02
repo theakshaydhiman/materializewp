@@ -1,5 +1,5 @@
-<?php get_header(); ?>
-<?php get_template_part('inc/partials/partials', 'navbar'); ?>
+<?php get_header();
+get_template_part('inc/partials/partial', 'navbar'); ?>
 
   <main role="main" class="container">
     <div>
@@ -11,5 +11,5 @@
     </div>
   </main>
 
-<?php get_template_part('inc/partials/partials', 'footer'); ?>
-<?php get_footer(); ?>
+<?php get_template_part('inc/partials/partial', 'footer');
+get_footer(); ?>
