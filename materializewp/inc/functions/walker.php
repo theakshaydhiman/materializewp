@@ -2,48 +2,49 @@
 
 /*
 * Source: https://github.com/Kail0/wp-materialize-navwalker/issues/2
+* Note: Not being used, until a stable version of Materialize framerwork is released.
 */
 
 class MWP_Walker_Nav_Primary extends Walker {
   var $db_fields = array( 'parent' => 'menu_item_parent', 'id' => 'db_id' );
 
-    function start_lvl( &$output, $depth = 0, $args = array() ) {
-        // Depth-dependent classes.
-        $indent = ( $depth > 0  ? str_repeat( "\t", $depth ) : '' ); // code indent
-        $display_depth = ( $depth + 1); // because it counts the first submenu as 0
-        $classes = array(
-            'dropdown-content',
-            ( $display_depth % 2  ? 'menu-odd' : 'menu-even' ),
-            ( $display_depth >=2 ? 'sub-sub-menu' : '' ),
-            'menu-depth-' . $display_depth
-        );
-        $class_names = implode( ' ', $classes );
+  function start_lvl( &$output, $depth = 0, $args = array() ) {
+    // Depth-dependent classes.
+    $indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
+    $display_depth = ( $depth + 1 ); // because it counts the first submenu as 0
+    $classes = array(
+      'dropdown-content',
+      ( $display_depth % 2  ? 'menu-odd' : 'menu-even' ),
+      ( $display_depth >=2 ? 'sub-sub-menu' : '' ),
+      'menu-depth-' . $display_depth
+    );
+    $class_names = implode( ' ', $classes );
 
-        // Build HTML for output.
-        $output .= "\n" . $indent . ' class="' . $class_names . '">' . "\n";
-    }
+    // Build HTML for output.
+    $output .= "\n" . $indent . ' class="' . $class_names . '">' . "\n";
+  }
 
   function end_lvl( &$output, $depth = 0, $args = array() ) {
     $indent = str_repeat("\t", $depth);
     $output .= "$indent</ul>\n";
   }
 
-    function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-        global $wp_query;
-        $indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
+  function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+    global $wp_query;
+    $indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
 
-        // Depth-dependent classes.
-        $depth_classes = array(
-            ( $depth == 0 ? 'main-menu-item' : 'sub-menu-item' ),
-            ( $depth >=2 ? 'sub-sub-menu-item' : '' ),
-            ( $depth % 2 ? 'menu-item-odd' : 'menu-item-even' ),
-            'menu-item-depth-' . $depth
-        );
-        $depth_class_names = esc_attr( implode( ' ', $depth_classes ) );
+    // Depth-dependent classes.
+    $depth_classes = array(
+        ( $depth == 0 ? 'main-menu-item' : 'sub-menu-item' ),
+        ( $depth >=2 ? 'sub-sub-menu-item' : '' ),
+        ( $depth % 2 ? 'menu-item-odd' : 'menu-item-even' ),
+        'menu-item-depth-' . $depth
+    );
+    $depth_class_names = esc_attr( implode( ' ', $depth_classes ) );
 
-        // Passed classes.
-        $classes = empty( $item->classes ) ? array() : (array) $item->classes;
-        $class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
+    // Passed classes.
+    $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+    $class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
 
     /* Add active class */
     if(in_array('current-menu-item', $classes)) {
@@ -90,6 +91,7 @@ class MWP_Walker_Nav_Primary extends Walker {
     $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 
   }
+  
   function end_el( &$output, $item, $depth = 0, $args = array() ) {
     $output .= "</li>\n";
   }

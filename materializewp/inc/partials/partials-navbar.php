@@ -13,8 +13,7 @@
         <?php wp_nav_menu(array(
           'menu' => 'primary',
           'theme_location' => 'primary',
-          'menu_class' => 'hide-on-med-and-down',
-          'walker' => new MWP_Walker_Nav_Primary(),
+          'menu_class' => 'hide-on-med-and-down'
           )); ?>
       </div>
 
@@ -22,10 +21,9 @@
   </nav>
   <?php wp_nav_menu(array(
     'menu' => 'primary',
-    'theme_location' => 'primary', // sub level does not work
+    'theme_location' => 'primary',
     'menu_class' => 'sidenav',
-    'menu_id' => 'mobile-demo',
-    'walker' => new MWP_Walker_Nav_Primary(),
+    'menu_id' => 'mobile-demo'
     )); ?>
 
 </header>

@@ -30,6 +30,7 @@
   </footer>
 <?php endif; ?>
 
+<!-- Footer copyright area -->
 <footer class="page-footer grey lighten-4">
   <div class="footer-copyright grey darken-3 grey-text text-lighten-1">
     <div class="container">
