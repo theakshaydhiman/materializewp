@@ -22,7 +22,7 @@
 
 <?php else : ?>
 
-<div class="blog-post post-image">
+<div class="blog-post">
 	<div class="card hoverable">
     <a href="<?php the_permalink(); ?>">
       <div class="post-thumb card-image">

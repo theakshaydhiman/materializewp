@@ -1,20 +1,23 @@
 <?php get_header();
 get_template_part('inc/partials/partial', 'navbar'); ?>
 
-  <main role="main" class="container">
+  <main class="container">
     <div class="row">
-      <div class="col s12 m12 l8 blog-main">
-        <?php if( have_posts() ) : ?>
-          <header class="page-header">
-            <?php the_archive_title('<h1 class="page-title">', '</h1>');
-              the_archive_description('<div class="taxonomy-description">', '</div>');
-            ?>
-          </header>
-          <?php while(have_posts()) : the_post();
-            get_template_part('post-templates/content', 'archive');
-          endwhile;
+      <div class="main-content">
+        <?php 
+          
+          if( have_posts() ) : 
+          
+          the_archive_title('<h1 class="page-title">', '</h1>');
+          the_archive_description('<span class="post-excerpt">', '</span>');
+          
+            while(have_posts()) : the_post();
+              get_template_part('post-templates/content', 'archive');
+            endwhile;
+
             materializewp_pagination();
-          else : ?>
+          else : 
+        ?>
           <p><?php __('No Posts Found') ?></p>
         <?php endif; ?>
       </div>

@@ -7,18 +7,18 @@
 get_header();
 get_template_part('inc/partials/partial', 'navbar'); ?>
 
-  <main role="main" class="container">
+  <main class="container">
     <div class="row">
 
       <?php if(is_active_sidebar('sidebar')): ?>
-        <div class="col s12 m12 l3">
+        <div class="left-sidebar">
           <?php dynamic_sidebar('sidebar'); ?>
         </div>
       <?php endif; ?>
 
-      <div class="col s12 m12 l8 offset-l1 blog-main">
+      <div class="right-content">
         <div class="card-panel">
-          <h1 class="blog-post-title"><?php the_title(); ?></h1>
+          <h1><?php the_title(); ?></h1>
             <?php 
             if( have_posts() ) :
               while(have_posts()) : the_post();

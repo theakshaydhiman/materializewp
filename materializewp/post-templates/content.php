@@ -7,26 +7,23 @@
       the_content();
 
       /* Display author section. */
-      if( is_single() ) {
-        get_template_part('inc/partials/partial', 'post-author');
-      }
+      get_template_part('inc/partials/partial', 'post-author');
 
       /* Display comments */
-      if( is_single() ):
-        if( comments_open() ) { 
-          comments_template();
-        } else { 
-          echo '<p>Comments are closed for this post.</p>';
-          }
-      endif;
+
+      if( comments_open() ) { 
+        comments_template();
+      } else { 
+        echo '<p>Comments are closed for this post.</p>';
+        }
 
     ?>
-    
+
   </div>
 
 <?php else : ?>
 
-  <div class="blog-post-excerpt">
+  <div class="blog-post">
     <a href="<?php the_permalink(); ?>">
 
       <div class="card hoverable">

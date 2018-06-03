@@ -1,6 +1,6 @@
 @import "materialize/materialize";
 
-/* Header */
+/* HEADER */
 main {
   padding: 20px 0 30px 0;
 }
@@ -15,44 +15,58 @@ nav .brand-logo {
   margin-top: 5px;
 }
 
-/*
- * Blog name and description
- */
-.blog-header {
-  padding-bottom: 1.25rem;
-  margin-bottom: 2rem;
-  border-bottom: .05rem solid #eee;
-}
-.blog-title {
-  margin-bottom: 0;
-}
-.blog-description {
-  color: #999;
-}
+/* BLOG POST */
 
-.page-header {
-  margin-bottom: 50px;
-}
-
-.blog-post, .blog-post-excerpt {
+.blog-post {
   margin-bottom: 4rem;
+  
+  a {
+    color: $off-black;
+  }
 }
 
-.blog-post-title {
-  margin-bottom: 1.25rem;
+.main-content {
+  @extend .col, .s12, .m12, .l8;
 }
 
-.post-thumb img {
+.post-excerpt {
+  @extend .h5, .grey-text, .text-darken-1;
+}
+
+.post-meta {
+  @extend .col, .s12, .m12, .l2, .grey-text, .text-darken-1;
+  margin-top: 20px;
+
+  &__author-img {
+    @media (max-width: 993px) {
+      display: inline;
+      float: left;
+    }
+  }
+
+  &__author-name-date {
+    font-size: 75%;
+    @media (max-width: 993px) {
+      display: inline;
+      float: left;
+      margin: 10px 0 0 20px;
+    }
+  }
+}
+
+.post-thumbnail {
   width: 100%;
   height: auto;
 }
 
-.blog-post-excerpt a {
-  color: rgba(0, 0, 0, 0.85);
+/* PAGE TEMPLATE */
+
+.left-sidebar {
+  @extend .col, .s12, .m12, .l3;
 }
 
-.avatar {
-  border-radius: 50%;
+.right-content {
+  @extend .col, .s12, .m12, .l8, .offset-l1;
 }
 
 /* COMMENTS */
@@ -84,12 +98,6 @@ nav .brand-logo {
   top: 10px;
 }
 
-/* SEARCHFORM */
-
-.input-field .prefix {
-  top: 10px;
-}
-
 /* FOOTER */
 .footer-widget-1, 
 .footer-widget-2, 
@@ -99,19 +107,37 @@ nav .brand-logo {
 .header-widget-2, 
 .header-widget-3, 
 .header-widget-4 {
+  @extend .grey, .lighten-3;
+
   margin: 0;
   padding: 50px 0;
   border-top: 1px solid rgba(0,0,0,0.25);
 }
 .page-footer {
+  @extend .grey, .lighten-4;
   padding-top: 0;
+
+  &__content {
+    @extend .footer-copyright, .grey, .darken-3, .grey-text, .text-lighten-1;
+  }
 }
 
-/* CONTENT TYPES */
-/* .card .card-title {
-  font-size: 2.5em;
-} */
+/* SEARCHFORM */
+
+.search-icon {
+  @extend .left, .prefix;
+}
+
+/* MISC */
+
+.main-sidebar {
+  @extend .col, .s12, .m12, .l3, .offset-l1;
+}
 
 .gallery {
   display: none;
+}
+
+.avatar {
+  @extend .circle;
 }

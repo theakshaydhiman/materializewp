@@ -2,7 +2,7 @@
 get_template_part('inc/partials/partial', 'navbar'); ?>
 
   <main class="container">
-    <h1 class="blog-post-title"><?php the_title(); ?></h1>
+    <h1><?php the_title(); ?></h1>
     <?php 
       while(have_posts()) : the_post();
         the_content();

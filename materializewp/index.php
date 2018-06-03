@@ -1,9 +1,9 @@
 <?php get_header();
 get_template_part('inc/partials/partial', 'navbar'); ?>
 
-  <main role="main" class="container">
+  <main class="container">
     <div class="row">
-      <div class="col s12 m12 l8 blog-main">
+      <div class="main-content">
         <?php if( have_posts() ) : ?>
           <h1><?php single_post_title(); ?></h1>
           <?php 
