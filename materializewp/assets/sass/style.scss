@@ -75,27 +75,66 @@ nav .brand-logo {
   padding-top: 20px;
 }
 
-.comments .comment-author img {
-  width: 120px;
-  float: left;
-  margin: 0 30px 30px 0;
-}
-
-.comment-author {
-  clear: both;
-}
-
-.comment-list>div {
+.comment {
   margin: 50px 0;
-  overflow: auto;
+
+  &__img {
+    @extend .col, .s12, .m2, .l2;
+  }
+
+  &__card {
+    @extend .col, .s12, .m10, .l10;
+
+    &--meta {
+      @extend .card-content, .grey, .lighten-4;
+
+      &-datetime {
+        a {
+          @extend .grey-text, .text-darken-1;
+        }
+      }
+    }
+
+    &--content {
+      @extend .card-content, .grey, .lighten-5;
+    }
+
+    &--reply {
+      @extend .card-action, .grey, .lighten-4;
+    }
+  }
+
+  &-reply-link {
+    @extend .red-text, .text-darken-1;
+  }
 }
 
-.comment-content {
-  clear: both;
-}
+.reply {
+  &__img {
+    @extend .col, .s12, .m2, .l2, .offset-m2, .offset-l2;
+  }
 
-.comments .fn {
-  top: 10px;
+  &__card {
+    @extend .col, .s12, .m8, .l8;
+
+    &--meta {
+      @extend .card-content, .grey, .lighten-4;
+
+      &-datetime {
+        a {
+          @extend .grey-text, .text-darken-1;
+        }
+      }
+    }
+
+    &--content {
+      @extend .card-content, .grey, .lighten-5;
+    }
+
+    &--reply {
+      @extend .card-action, .grey, .lighten-4;
+    }
+  }
 }
 
 /* FOOTER */

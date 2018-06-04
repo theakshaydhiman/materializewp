@@ -11,23 +11,29 @@ if ( post_password_required() )
 
 <div class="comments">
 
+  <!-- Display Comment -->
+
   <?php if ( have_comments() ) : ?>
     <h3 class="h4"><?php comments_number('Leave a comment', '1 Comment', '% Comments'); ?></h3>
   <?php endif; ?>
 
-  <div class="comment-list">
+
     <?php
 
     $args = array(
-      'style'             => 'div',
-      'reply_text'        => 'Reply',
-      'avatar_size'       => 120,
-      'format'            => 'html5'
+      'style'             =>  'div',
+      'avatar_size'       =>  90,
+      'format'            =>  'html5',
+      'callback'          =>  'mwp_comments_callback'
       );
 
-    wp_list_comments($args, $comments);
+    wp_list_comments($args);
+
     ?>
-  </div>
+
+
+  <!-- Submit Comment -->
+
   <?php
   $commenter = wp_get_current_commenter();
   $req = get_option( 'require_name_email' );
@@ -59,7 +65,7 @@ if ( post_password_required() )
     'comment_notes_after' =>  '',
     'comment_field'       =>  '<p class="comment-form-comment input-field"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" aria-required="true" class="materialize-textarea"></textarea></p>',
     'fields'              =>  apply_filters( 'comment_form_default_fields', $fields ),
-    'submit_button'       =>  '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s</button>'
+    'submit_button'       =>  '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s<i class="material-icons right">send</i></button>'
   );
 
   comment_form($comments_args);
