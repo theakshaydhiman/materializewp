@@ -1,33 +1,33 @@
 <?php if(is_active_sidebar('footer-four')): ?>
-  <footer class="footer-widget-4">
+  <section class="footer-widget-4">
     <div class="container">
       <?php dynamic_sidebar('footer-four'); ?>
     </div>
-  </footer>
+  </section>
 <?php endif; ?>
 
 <?php if(is_active_sidebar('footer-three')): ?>
-  <footer class="footer-widget-3">
+  <section class="footer-widget-3">
     <div class="container">
       <?php dynamic_sidebar('footer-three'); ?>
     </div>
-  </footer>
+  </section>
 <?php endif; ?>
 
 <?php if(is_active_sidebar('footer-two')): ?>
-  <footer class="footer-widget-2">
+  <section class="footer-widget-2">
     <div class="container">
       <?php dynamic_sidebar('footer-two'); ?>
     </div>
-  </footer>
+  </section>
 <?php endif; ?>
 
 <?php if(is_active_sidebar('footer-one')): ?>
-  <footer class="footer-widget-1">
+  <section class="footer-widget-1">
     <div class="container">
       <?php dynamic_sidebar('footer-one'); ?>
     </div>
-  </footer>
+  </section>
 <?php endif; ?>
 
 <!-- Footer copyright area -->
