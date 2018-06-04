@@ -72,7 +72,7 @@ nav .brand-logo {
 /* COMMENTS */
 
 .comments {
-  margin-top: 30px;
+  padding-top: 20px;
 }
 
 .comments .comment-author img {
@@ -124,6 +124,42 @@ nav .brand-logo {
 
 .search-icon {
   @extend .left, .prefix;
+}
+
+/* POST AUTHOR PARTIAL */
+
+.post-author {
+  @extend .card;
+  margin: 50px 0;
+
+  &__about {
+    @extend .card-content, .grey, .lighten-4, .grey-text;
+  }
+
+  &__meta {
+    @extend .card-content, .grey, .lighten-5;
+
+    &--container {
+      @extend .row;
+      margin-bottom: 0;
+    }
+
+    &--avatar {
+      @extend .col, .s12, .m4, .l3, .center-align;
+    }
+  
+    &--description {
+      @extend .col, .s12, .m8, .l9;
+    }
+  }
+  
+  &__links {
+    @extend .card-action, .grey, .lighten-4;
+
+    &--btn {
+      @extend .btn-flat, .red-text, .text-darken-1;
+    }
+  }
 }
 
 /* MISC */
