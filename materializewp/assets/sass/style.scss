@@ -69,6 +69,10 @@ nav .brand-logo {
   @extend .col, .s12, .m12, .l8, .offset-l1;
 }
 
+.page-parallax-thumbnail {
+  filter: brightness(50%);
+}
+
 /* COMMENTS */
 
 .comments {
