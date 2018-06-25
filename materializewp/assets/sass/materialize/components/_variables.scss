@@ -41,7 +41,7 @@ $primary-color-dark: darken($primary-color, 15%) !default;
 $secondary-color: color("red", "darken-1") !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
-$link-color: color("blue", "darken-1") !default;
+$link-color: color("light-blue", "darken-1") !default;
 
 
 // 2. Badges
@@ -253,6 +253,7 @@ $navbar-brand-font-size: 2.1rem !default;
 // 14. Side Navigation
 // ==========================================================================
 
+$sidenav-width: 300px !default;
 $sidenav-font-size: 14px !default;
 $sidenav-font-color: rgba(0,0,0,.87) !default;
 $sidenav-bg-color: #fff !default;
@@ -302,7 +303,7 @@ $toast-action-color: #eeff41;
 // 20. Typography
 // ==========================================================================
 
-$font-stack: Roboto, sans-serif !default;
+$font-stack: Roboto, "Helvetica Neue", Helvetica, sans-serif !default;
 $off-black: rgba(0, 0, 0, 0.87) !default;
 // Header Styles
 $h1-fontsize: 4.2rem !default;
