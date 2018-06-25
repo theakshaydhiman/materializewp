@@ -31,8 +31,8 @@
 <?php endif; ?>
 
 <!-- Footer copyright area -->
-<footer class="page-footer">
-  <div class="page-footer__content">
+<footer class="page-footer grey lighten-4">
+  <div class="footer-copyright grey darken-3 grey-text text-lighten-1">
     <div class="container">
       <p>&copy; <?php echo Date('Y'); ?> <?php bloginfo('name'); ?><span class="right"><small>Powered by <a href="https://github.com/theakshaydhiman/materializewp" rel="noopener" target="_blank">MaterializeWP</a></small></span></p>
     </div>

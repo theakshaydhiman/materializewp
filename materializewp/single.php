@@ -9,7 +9,7 @@ get_template_part('inc/partials/partial', 'navbar'); ?>
 
         // Show post excerpt, if available.
         if ( has_excerpt() ) {
-          ?><span class="post-excerpt"><?php the_excerpt(); ?></span><?php
+          ?><span class="h5 grey-text text-darken-1"><?php the_excerpt(); ?></span><?php
         }
 
         // Show post thumbnail, if available.
@@ -18,7 +18,7 @@ get_template_part('inc/partials/partial', 'navbar'); ?>
         }
       ?>
 
-      <div class="post-meta">
+      <div class="post-meta col s12 m12 l2 grey-text text-darken-1">
         <div class="post-meta__author-img">
           <?php 
           global $post;
@@ -35,7 +35,7 @@ get_template_part('inc/partials/partial', 'navbar'); ?>
         </div>
       </div>
       
-      <div class="main-content">
+      <div class="col s12 m12 l8">
         <?php
           if(have_posts()) :
             while(have_posts()) : the_post();

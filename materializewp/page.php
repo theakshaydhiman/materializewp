@@ -3,7 +3,7 @@ get_template_part('inc/partials/partial', 'navbar'); ?>
 
   <main class="container">
     <div class="row">
-      <div class="main-content">
+      <div class="col s12 m12 l8">
         <h1><?php the_title(); ?></h1>
         <?php 
         if(have_posts()) :

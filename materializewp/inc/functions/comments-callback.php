@@ -12,13 +12,13 @@ function mwp_comments_callback( $comment, $args, $depth ) {
 	// checks if it's a comment or reply
 	if( '0' != $comment->comment_parent ){
 		// this is a reply
-		$c_check_img = 'reply__img';
-		$c_check_card = 'reply__card';
+		$c_check_img = 'col s12 m2 l2 offset-m2 offset-l2';
+		$c_check_card = 'col s12 m8 l8';
 		$c_check_parent = '';
 	} else {
 		// this is a comment
-		$c_check_img = 'comment__img';
-		$c_check_card = 'comment__card';
+		$c_check_img = 'col s12 m2 l2';
+		$c_check_card = 'col s12 m10 l10';
 		$c_check_parent = 'row';
 	}
 
@@ -33,30 +33,28 @@ function mwp_comments_callback( $comment, $args, $depth ) {
 		<div class="<?php echo $c_check_card ?>">
 
 			<div id="div-comment-<?php comment_ID(); ?>" class="card">
-				<div class="comment__card--meta">
+				<div class="card-content grey lighten-4">
 
-					<div class="comment__card--meta-author">
-						<?php printf( __( '%s <span class="says">says:</span>' ), sprintf( '<b>%s</b>', get_comment_author_link( $comment ) ) ); ?>
-					</div><!-- .comment-author -->
+					<?php printf( __( '%s <span class="says">says:</span>' ), sprintf( '<b>%s</b>', get_comment_author_link( $comment ) ) ); ?>
 
-					<div class="comment__card--meta-datetime">
-						<a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
-								<time datetime="<?php comment_time( 'c' ); ?>">
-									<?php
-											/* translators: 1: comment date, 2: comment time */
-											printf( __( '%1$s at %2$s' ), get_comment_date( '', $comment ), get_comment_time() );
-									?>
-								</time>
-						</a>
-						<?php edit_comment_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
-					</div><!-- .comment-metadata -->
+					<br>
+
+					<a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>" class="grey-text text-darken-1">
+							<time datetime="<?php comment_time( 'c' ); ?>">
+								<?php
+										/* translators: 1: comment date, 2: comment time */
+										printf( __( 'On %1$s at %2$s' ), get_comment_date( '', $comment ), get_comment_time() );
+								?>
+							</time>
+					</a>
+					<?php edit_comment_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
 
 					<?php if ( '0' == $comment->comment_approved ) : ?>
 					<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></p>
 					<?php endif; ?>
 				</div><!-- .comment-meta -->
 
-				<div class="comment__card--content">
+				<div class="card-content grey lighten-5">
 						<?php comment_text(); ?>
 				</div><!-- .comment-content -->
 
@@ -65,7 +63,7 @@ function mwp_comments_callback( $comment, $args, $depth ) {
 						'add_below' => 'div-comment',
 						'depth'     => $depth,
 						'max_depth' => $args['max_depth'],
-						'before'    => '<div class="comment__card--reply">',
+						'before'    => '<div class="card-action grey lighten-4">',
 						'after'     => '</div>'
 				) ) );
 				?>

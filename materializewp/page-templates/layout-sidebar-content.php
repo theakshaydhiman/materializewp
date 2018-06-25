@@ -11,12 +11,12 @@ get_template_part('inc/partials/partial', 'navbar'); ?>
     <div class="row">
 
       <?php if(is_active_sidebar('sidebar')): ?>
-        <div class="left-sidebar">
+        <div class="col s12 m12 l3">
           <?php dynamic_sidebar('sidebar'); ?>
         </div>
       <?php endif; ?>
 
-      <div class="right-content">
+      <div class="col s12 m12 l8 offset-l1">
         <div class="card-panel">
           <h1><?php the_title(); ?></h1>
             <?php 
