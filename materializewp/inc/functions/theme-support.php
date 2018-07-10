@@ -59,11 +59,18 @@ function add_image_class($class){
 }
 add_filter('get_image_tag_class','add_image_class');
 
-// Add class 'video-container' to all post iframe videos
+// Add class 'video-container' to all post iframe videos.
 function iframe_video( $html ) {
 	$html = str_replace('<iframe', '<div class="video-container"><iframe', $html);
 	$html = str_replace('</iframe>', '</iframe></div>', $html);
 	return $html;
 }
 add_filter('embed_oembed_html', 'iframe_video', 99, 4);
+
+// Add class 'browser-default' to all 'ul' tags while executing the_content().
+function ul_tag_content_filter( $content ) {
+    $content = str_replace('<ul>', '<ul class="browser-default">', $content);
+    return $content;
+}
+add_filter( 'the_content', 'ul_tag_content_filter', 20 );
 ?>
